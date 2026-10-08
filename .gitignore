@@ -9,3 +9,7 @@ data/methodologies/*
 !data/methodologies/investment-methodology-v3.md
 !data/methodologies/sample-methodology.md
 *.tmp
+.next/
+next-env.d.ts
+.vercel/
+work/

@@ -1,0 +1,14 @@
+{
+  "name": "stock-research-worker",
+  "private": true,
+  "type": "module",
+  "description": "Runtime dependencies of the research worker (installed inside the Vercel Sandbox).",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "@neondatabase/serverless": "^1.2.0",
+    "@vercel/blob": "^2.8.1",
+    "google-auth-library": "^11.2.0",
+    "pptxgenjs": "^4.0.1",
+    "puppeteer": "^23.11.1"
+  }
+}

@@ -5,21 +5,35 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "worker": "node worker/run.mjs",
     "setup:python": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install numpy pandas scipy statsmodels yfinance matplotlib",
     "setup:python:win": "python -m venv .venv && .venv\\\\Scripts\\\\python -m pip install --upgrade pip && .venv\\\\Scripts\\\\python -m pip install numpy pandas scipy statsmodels yfinance matplotlib",
-    "check": "node --check server.js && for f in lib/*.js; do node --check $f || exit 1; done && echo syntax ok"
+    "check": "node --check worker/run.mjs && for f in lib/*.js; do node --check $f || exit 1; done && echo syntax ok",
+    "lint": "next lint"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.132.1",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.2",
-    "multer": "^2.1.1",
+    "@neondatabase/serverless": "^1.2.0",
+    "@vercel/blob": "^2.8.1",
+    "@vercel/sandbox": "^3.6.0",
+    "google-auth-library": "^11.2.0",
+    "next": "^16.4.0",
     "pdf-parse": "^2.4.5",
-    "pptxgenjs": "^4.0.1"
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "dotenv": "^16.4.5"
   },
   "optionalDependencies": {
     "puppeteer": "^23.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
   }
 }
