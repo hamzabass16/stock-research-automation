@@ -27,6 +27,10 @@ judgment lens for every subjective call. The report template never changes.
   <img src="docs/screenshots/report-first-page.jpg" alt="First page of a generated report" width="800">
 </p>
 
+## Example output
+
+A real run is in [`examples/`](examples/): the full META research report (PDF) and the generated investment-committee deck (PPTX).
+
 ## Try the demo (no API key needed)
 
 ```bash
