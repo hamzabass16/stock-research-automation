@@ -30,7 +30,7 @@ judgment lens for every subjective call. The report template never changes.
 ## Try the demo (no API key needed)
 
 ```bash
-git clone <this repo> && cd stock-research-app
+git clone https://github.com/hamzabass16/stock-research-automation.git && cd stock-research-automation
 npm install
 cp .env.example .env            # leave ANTHROPIC_API_KEY empty → DEMO MODE
 npm start                       # http://localhost:4317
