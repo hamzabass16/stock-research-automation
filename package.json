@@ -1,0 +1,25 @@
+{
+  "name": "stock-research-automation",
+  "version": "2.0.0",
+  "description": "Autonomous stock research pipeline with a web UI: ticker + thesis in, sourced PDF report + Gamma pitch deck out. Pluggable investment methodologies, constant stock template.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "setup:python": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install numpy pandas scipy statsmodels yfinance matplotlib",
+    "setup:python:win": "python -m venv .venv && .venv\\\\Scripts\\\\python -m pip install --upgrade pip && .venv\\\\Scripts\\\\python -m pip install numpy pandas scipy statsmodels yfinance matplotlib",
+    "check": "node --check server.js && for f in lib/*.js; do node --check $f || exit 1; done && echo syntax ok"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "multer": "^2.1.1",
+    "pdf-parse": "^2.4.5",
+    "pptxgenjs": "^4.0.1"
+  },
+  "optionalDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
